@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Price Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Mobile Price Prediction</h1>
+        
+        <form action="{{ url_for('predict') }}" method="post">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Battery (mAh)</label>
+                    <input type="number" name="battery_power" placeholder="e.g. 1500">
+                </div>
+
+                <div class="form-group">
+                    <label>RAM (MB)</label>
+                    <input type="number" name="ram" placeholder="e.g. 2048">
+                </div>
+
+                <div class="form-group">
+                    <label>Front Camera (MP)</label>
+                    <input type="number" name="fc" placeholder="e.g. 8">
+                </div>
+
+                <div class="form-group">
+                    <label>Primary Camera (MP)</label>
+                    <input type="number" name="pc" placeholder="e.g. 12">
+                </div>
+
+                <div class="form-group">
+                    <label>Screen (H×W cm)</label>
+                    <div class="dual-input">
+                        <input type="number" name="sc_h" placeholder="Height">
+                        <input type="number" name="sc_w" placeholder="Width">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Resolution (H×W px)</label>
+                    <div class="dual-input">
+                        <input type="number" name="px_height" placeholder="Height">
+                        <input type="number" name="px_width" placeholder="Width">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Memory & Speed</label>
+                    <div class="dual-input">
+                        <input type="number" name="int_memory" placeholder="Memory GB">
+                        <input type="number" step="0.1" name="clock_speed" placeholder="Clock GHz">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Physical</label>
+                    <div class="dual-input">
+                        <input type="number" step="0.1" name="m_dep" placeholder="Depth cm">
+                        <input type="number" name="mobile_wt" placeholder="Weight g">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Core Features</label>
+                    <div class="dual-input">
+                        <input type="number" name="n_cores" placeholder="Cores">
+                        <input type="number" name="talk_time" placeholder="Talk hrs">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Connectivity</label>
+                    <div class="triple-select">
+                        <select name="blue">
+                            <option value="1">Bluetooth Yes</option>
+                            <option value="0">Bluetooth No</option>
+                        </select>
+                        <select name="three_g">
+                            <option value="1">3G Yes</option>
+                            <option value="0">3G No</option>
+                        </select>
+                        <select name="four_g">
+                            <option value="1">4G Yes</option>
+                            <option value="0">4G No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Other Features</label>
+                    <div class="triple-select">
+                        <select name="dual_sim">
+                            <option value="1">Dual SIM Yes</option>
+                            <option value="0">Dual SIM No</option>
+                        </select>
+                        <select name="touch_screen">
+                            <option value="1">Touch Yes</option>
+                            <option value="0">Touch No</option>
+                        </select>
+                        <select name="wifi">
+                            <option value="1">WiFi Yes</option>
+                            <option value="0">WiFi No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="submit-btn">
+                    <button type="submit">Predict Price</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html> 

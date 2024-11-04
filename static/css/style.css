@@ -1,0 +1,122 @@
+.container {
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+/* Single input fields (top 4 boxes) */
+.form-group input:not(.dual-input input) {
+    width: 180px;  /* Reduced width for single inputs */
+}
+
+label {
+    display: block;
+    color: #495057;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+input, select {
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 14px;
+    background: white;
+}
+
+input::placeholder {
+    color: #adb5bd;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #4dabf7;
+    box-shadow: 0 0 0 3px rgba(77, 171, 247, 0.1);
+}
+
+.dual-input {
+    display: flex;
+    gap: 8px;
+}
+
+.dual-input input {
+    width: 50%;
+}
+
+/* Updated select styling */
+.triple-select {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+}
+
+select {
+    padding: 8px;
+    font-size: 13px;
+    width: 100%;
+    text-align: center;
+    background: white;
+    cursor: pointer;
+}
+
+/* Make Yes/No options more readable */
+select option {
+    padding: 4px;
+    font-size: 13px;
+}
+
+.submit-btn {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    background: #339af0;
+    color: white;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: #228be6;
+    transform: translateY(-1px);
+}
+
+.result {
+    text-align: center;
+    margin: 15px 0;
+    padding: 15px;
+    background: white;
+    border-radius: 4px;
+} 
